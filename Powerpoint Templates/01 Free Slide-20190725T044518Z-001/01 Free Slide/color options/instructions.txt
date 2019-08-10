@@ -1,0 +1,20 @@
+How to change color theme:
+
+go to -> tab "View" -> "Slide Master" -> click "Colors" on top -> Customize Colors
+
+all the files i made based on color theme, so it will make it easy to change it :).
+
+
+
+
+For Change Background:
+
+go to -> tab "View" -> "Slide Master" -> Right Click "Format Background" -> Picture or texture fill -> chose image on "background" Folder
+
+
+
+
+HOW INSTALL XML COLOR THEME IN OFFICE THEME (WINDOWS) - COPY AND PASTE "Color Themes" to folder:
+
+C:\Program Files\Microsoft Office\Document Themes 16\Theme Colors
+
