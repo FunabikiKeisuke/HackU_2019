@@ -68,7 +68,7 @@ article,section {
 .pc{display: none;}
 
 a img{-webkit-transition: all .3s ease-out; -moz-transition: all .3s ease-out; -ms-transition: all .3s ease-out;}
-a:hover img, a:hover h2 {filter: alpha(opacity=60);opacity:0.6;background: none;}
+a:hover img, a:hover p, a:hover h2 {filter: alpha(opacity=60);opacity:0.6;background: none;}
 
 /* index */
 header {

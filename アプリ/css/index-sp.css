@@ -68,7 +68,7 @@ article,section {
 .pc{display: none;}
 
 a img{-webkit-transition: all .3s ease-out; -moz-transition: all .3s ease-out; -ms-transition: all .3s ease-out;}
-a:hover img {filter: alpha(opacity=60);opacity:0.6;background: none;}
+a:hover img, a:hover p, a:hover h2 {filter: alpha(opacity=60);opacity:0.6;background: none;}
 
 /* index */
 header ul {
@@ -133,7 +133,7 @@ header ul li a p {
 .contentbox {
   display: inline-block;
   width: 41.9270833333vw;
-  margin: 2.60416666667vw 5.20833333333vw 2.60416666667vw 0;
+  margin: 2.60416666667vw 3.20833333333vw 2.60416666667vw 0;
   border: 0.520833333333vw solid #181800;
   border-radius: 1.30208333333vw;
 }
