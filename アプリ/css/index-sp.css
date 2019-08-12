@@ -17,6 +17,7 @@ body {
 	overflow-x: hidden;
 	letter-spacing: 0;
 	font-display: swap;
+	background: #f7f7f7;
 }
 
 div:after,ul:after,nav:after,section:after,header:after,li:after {
@@ -73,7 +74,7 @@ a:hover img, a:hover p, a:hover h2 {filter: alpha(opacity=60);opacity:0.6;backgr
 /* index */
 header ul {
   width: 100.0vw;
-  height: 9vh;
+  height: 16vw;
   position: relative;
   background: #dfdfdf;
   font-size: 0;
@@ -125,9 +126,7 @@ header ul li a p {
 }
 
 .inner {
-  height: 91vh;
-  padding: 10.53125vh 5.20833333333vw;
-  background: #f7f7f7;
+	padding: 10.53125vw 5.20833333333vw;
   font-size: 0;
 }
 .contentbox {
