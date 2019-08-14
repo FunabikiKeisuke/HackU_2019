@@ -1,0 +1,122 @@
+@charset "utf-8";
+/* index */
+header ul {
+  width: 100.0vw;
+  height: 16vw;
+  position: relative;
+  background: #dfdfdf;
+  font-size: 0;
+}
+header ul li {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+header ul li.ico1 {
+  left: 3.90625vw;
+}
+header ul li.ico2 {
+  left: 26.0416666667vw;
+}
+header ul li.ico3 {
+  right: 15.625vw;
+}
+header ul li.ico4 {
+  right: 3.90625vw;
+}
+header ul li a {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+}
+header .img-wrap {
+  text-align: center;
+  margin-bottom: 1.30208333333vw;
+}
+header .ico2 .img-wrap {
+  margin-bottom: 0;
+}
+header ul li a img {
+  width: auto;
+  height: 7.8125vw;
+  text-align: center;
+}
+header ul li.ico2 a img {
+  height: 13.0208333333vw;
+}
+header ul li a p {
+  font-size: 3.125vw;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #181800;
+  text-align: center;
+}
+
+.inner {
+	padding: 10.53125vw 5.20833333333vw;
+  font-size: 0;
+}
+.contentbox {
+  display: inline-block;
+  width: 41.9270833333vw;
+  margin: 2.60416666667vw 3.20833333333vw 2.60416666667vw 0;
+  border: 0.520833333333vw solid #181800;
+  border-radius: 1.30208333333vw;
+}
+.contentbox a {
+	display: block;
+  width: 100%;
+	height: 100%;
+  text-decoration: none;
+	color: #181800;
+}
+.contentbox:nth-child(even) {
+  margin-right: 0;
+}
+.contentbox .img-wrap {
+  text-align: center;
+}
+.contentbox img {
+  width: 31.25vw;
+  height: auto;
+  margin: 5.20833333333vw 0;
+}
+.contentbox h2 {
+  text-align: center;
+  font-size: 5.20833333333vw;
+  font-weight: 500;
+  margin-bottom: 5.20833333333vw;
+}
+.entry{
+  font-weight: 600;
+  padding:30px;
+  font-size: 35px;
+  text-align: center;
+}
+.username{
+  padding:10px;
+  font-size:25px;
+  text-align: center;
+}
+.mailaddress{
+  padding:10px;
+  font-size:25px;
+  text-align: center;
+}
+.loginpass{
+  padding:10px;
+  font-size:25px;
+  text-align: center;
+}
+.rekey{
+  padding:10px 0px 40px 0px;
+  font-size:25px;
+  text-align: center;
+}
+.decisionbotton{
+  padding:10px 15px;
+  font-size:20px;
+  text-align: center;
+  background-color: aqua;
+}
