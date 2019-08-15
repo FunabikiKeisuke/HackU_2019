@@ -1,6 +1,9 @@
 @charset "utf-8";
 /* common use */
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,500,700,900&display=swap&subset=japanese');
+.img-wrap{
+	font-size:16px;
+}
 html {
 	height:100%;
 	-webkit-text-size-adjust:100%;
