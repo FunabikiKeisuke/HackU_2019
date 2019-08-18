@@ -1,3 +1,47 @@
+<?php
+require('dbconnect.php');
+
+session_start();
+
+if (!empty($_POST)) {
+	//エラー項目の確認
+	if ($_POST['name'] == '') {
+		$error['name'] = 'blank';
+	}
+	if ($_POST['email'] == '') {
+		$error['email'] = 'blank';
+	}
+	if (strlen($_POST['password']) < 4) {
+		$error['password'] = 'length';
+	}
+	if ($_POST['password'] == '') {
+		$error['password'] = 'blank';
+	}
+
+	//重複アカウントのチェック
+	if (empty($error)) {
+		$member = $db -> prepare('SELECT COUNT(*) AS cnt FROM members WHERE email=?');
+		$member -> execute(array($_POST['email']));
+		$record = $member -> fetch();
+		if ($record['cnt'] > 0) {
+			$error['email'] = 'duplicate';
+		}
+	}
+
+	if (empty($error)) {
+		$_SESSION['join'] = $_POST;
+		header('Location: check.php');
+		exit();
+	}
+}
+
+//書き直し
+if ($_REQUEST['action'] == 'rewrite') {
+	$_POST = $_SESSION['join'];
+	$error['rewrite'] = true;
+}
+ ?>
+
 <!DOCTYPE html>
 <html lang="ja" dir="ltr">
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/website#">
@@ -53,7 +97,7 @@
             <img src="img/hd_logo.png" alt="ロゴ">
           </div>
         </a>
-      </li>     
+      </li>
     </ul>
   </header>
   <!-- maincontents -->
