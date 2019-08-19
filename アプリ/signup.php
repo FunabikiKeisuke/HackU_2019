@@ -4,7 +4,7 @@ require('dbconnect.php');
 session_start();
 
 error_reporting(E_ALL); // E_STRICTレベル以外のエラーを報告する
-// ini_set('display_errors', 'Off'); // 画面にエラーを表示しない
+ini_set('display_errors', 'Off'); // 画面にエラーを表示しない
 
 // 1.post送信されていた場合
 if (!empty($_POST)) {
@@ -93,13 +93,12 @@ if (!empty($_POST)) {
       } elseif (mb_strlen($pass) < 6) {
         $err_msg['password'] = MSG05;
       }
-
-			if (empty($err_msg)) {
-				$_SESSION['join'] = $_POST;
-				header("Location:check.php");
-				exit();
-			}
 		}
+	}
+	if (empty($err_msg)) {
+		$_SESSION['join'] = $_POST;
+		header("Location: check.php");
+		exit();
 	}
 }
 
@@ -171,7 +170,7 @@ if ($_REQUEST['action'] == 'rewrite') {
 	<!-- maincontents -->
 	<main>
 		<h2 class="entry">FUTURE 新規登録</h2>
-		<form action="" method="post">
+		<form action="" method="post" enctype="multipart/form-data">
 			<span class="err_msg"><?php if(!empty($err_msg['user_name'])) echo $err_msg['user_name']; ?></span>
 			<div class="username">
 				<label>ユーザー名

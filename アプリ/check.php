@@ -1,10 +1,14 @@
 <?php
-require('dbconnect.php');
-
 session_start();
+require('dbconnect.php');
 
 error_reporting(E_ALL); // E_STRICTレベル以外のエラーを報告する
 // ini_set('display_errors', 'Off'); // 画面にエラーを表示しない
+
+if (!isset($_SESSION['join'])) {
+	header('Location: signup.php');
+	exit();
+}
 
 if (!empty($_POST)) {
 	// 登録処理をする
@@ -17,6 +21,7 @@ if (!empty($_POST)) {
 		SHA1($_SESSION['join']['password']),
 	));
 	unset($_SESSION['join']);
+	
 	header('Location: thanks.php');
 	exit();
 }
