@@ -1,32 +1,3 @@
-<?php
-session_start();
-require('dbconnect.php');
-
-error_reporting(E_ALL); // E_STRICTレベル以外のエラーを報告する
-// ini_set('display_errors', 'Off'); // 画面にエラーを表示しない
-
-if (!isset($_SESSION['join'])) {
-	header("Location: https://believerfuture.000webhostapp.com/signup.php");
-	exit();
-}
-
-if (!empty($_POST)) {
-	// 登録処理をする
-	$statement = $db -> prepare('INSERT INTO users SET user_name=?, sex=?, age=?, mail=?, password=?, created=NOW()');
-	$ret = $statement -> execute(array(
-		$_SESSION['join']['user_name'],
-		$_SESSION['join']['sex'],
-		$_SESSION['join']['age'],
-		$_SESSION['join']['mail'],
-		SHA1($_SESSION['join']['password']),
-	));
-	unset($_SESSION['join']);
-
-	header("Location: https://believerfuture.000webhostapp.com/thanks.php");
-	exit();
-}
- ?>
-
 <!DOCTYPE html>
 <html lang="ja" dir="ltr">
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
@@ -87,39 +58,13 @@ if (!empty($_POST)) {
 	</header>
 	<!-- maincontents -->
 	<main>
-		<h2 class="entry">内容確認</h2>
+		<h2 class="entry">登録完了</h2>
 		<form action="" method="post">
-			<input type="hidden" name="action" value="submit">
-			<div class="username">
-				<label>ユーザー名
-					<?php echo htmlspecialchars($_SESSION['join']['user_name'], ENT_QUOTES); ?>
-				</label>
+			<p>ユーザー登録が完了しました。</p>
+			<div class="button">
+				<p class="btn"><a href="login.php" class="widebtn">ログインする</a></p>
 			</div>
-			<div class="username">
-				<label>性別
-					<?php echo htmlspecialchars($_SESSION['join']['sex'], ENT_QUOTES); ?>
-				</label>
-			</div>
-			<div class="age">
-				<label>年齢
-					<?php echo htmlspecialchars($_SESSION['join']['age'], ENT_QUOTES); ?>
-				</label>
-			</div>
-			<div class="mailaddress">
-				<label>メールアドレス
-					<?php echo htmlspecialchars($_SESSION['join']['mail'], ENT_QUOTES); ?>
-				</label>
-			</div>
-			<div class="entry">
-				<label>パスワード
-					<p>【パスワードは表示されません】</p>
-				</label>
-			</div>
-			<div class="submit_btn">
-				<a href="signup.php?action=rewrite">書き直す</a>
-				<input class="btn" type="submit" value="登録する">
-			</div>
-		</div>
+		</form>
 </main>
 </body>
 </html>

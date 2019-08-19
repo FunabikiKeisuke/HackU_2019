@@ -1,3 +1,48 @@
+<?php
+require('dbconnect.php');
+
+session_start();
+
+if ($_COOKIE['mail'] != '') {
+	$_POST['user_name'] = $_COOKIE['user_name'];
+	$_POST['password'] = $_COOKIE['password'];
+	$_POST['save'] = 'on';
+}
+
+if (!empty($_POST)) {
+  define('MSG01', 'ユーザー名とパスワードを入力してください')
+  define('MSG02', '入力が正しくありません')
+
+	//ログイン処理
+	if ($_POST['user_name'] != '' && $_POST['password'] != '') {
+		$login = $db -> prepare('SELECT * FROM users WHERE user_name=? AND password=?');
+		$login -> execute(array(
+			$_POST['user_name'],
+			SHA1($_POST['password'])
+		));
+		$member = $login -> fetch();
+
+		if ($member) {
+			//ログイン成功
+			$_SESSION['id'] = $member['id'];
+			$_SESSION['time'] = time();
+
+			//ログイン情報を記録する
+			if ($_POST['save'] == 'on') {
+				setcookie('user_name', $_POST['user_name'], time() + 60 * 60 * 24 * 14);
+				setcookie('password', $_POST['password'], time() + 60 * 60 * 24 * 14);
+			}
+
+	    header("Location: https://believerfuture.000webhostapp.com/index.php");
+			exit();
+		} else {
+			$err_msg['login'] = MSG02;
+		}
+	} else {
+		$err_msg['login'] = MSG01;
+	}
+}
+ ?>
 <!DOCTYPE html>
 <html lang="ja" dir="ltr">
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
@@ -75,21 +120,28 @@
   <!-- maincontents -->
   <main>
     <div class="login">ログイン</div><br>
-<div class="username">
-    <label>ユーザー名
-   <input type="name" name="name">
-  </label>
-</div>
-  <br>
-  <div class="loginpass">
-  <label>パスワード
-     <input type="password" name="password">
-</label>
-<br>
-<br>
-<input class="loginbutton" type="submit" name="login" value="ログイン">
-</div>
+    <div class="username">
+      <span class="err_msg"><?php if(!empty($err_msg['login'])) echo $err_msg['login']; ?></span>
+      <label>ユーザー名
+        <input type="user_name" name="user_name" value="<?php echo htmlspecialchars($_POST['user_name'], ENT_QUOTES); ?>">
+      </label>
+    </div>
+    <div class="loginpass">
+      <label>パスワード
+        <input type="password" name="password" value="<?php echo htmlspecialchars($_POST['password'], ENT_QUOTES); ?>">
+      </label>
+    </div>
+    <div class="form-group">
+      <label>ログイン情報の記録</label>
+    </div>
+    <div class="form-group">
+      <input type="checkbox" class="form-control" id="save" name="save" value="on">
+      <label for="save" id="rememberLabel">次回から自動的にログインする</label>
+    </div>
+    <button class="loginbutton" type="submit" href="index.html">ログイン</button>
+    <div class="form-group">
+      <a href="signup.php">新規登録はこちら</a>
+    </div>
   </main>
-
-  </body>
+</body>
 </html>

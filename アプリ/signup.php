@@ -17,7 +17,6 @@ if (!empty($_POST)) {
 	define('MSG07', 'このメールアドレスは既に使われています');
 	define('MSG08', '年齢が正しくありません');
 
-	$err_flg = false;
 	$err_msg = array();
 
 	// 2.フォームが入力されていない場合
@@ -33,7 +32,7 @@ if (!empty($_POST)) {
   if (empty($_POST['mail'])) {
     $err_msg['mail'] = MSG01;
   }
-  if (empty($_POST['pass'])) {
+  if (empty($_POST['password'])) {
     $err_msg['password'] = MSG01;
   }
   if (empty($_POST['pass_retype'])) {
@@ -54,7 +53,7 @@ if (!empty($_POST)) {
 			$user -> execute(array($_POST['user_name']));
 			$record = $user -> fetch();
 			if ($record['cnt'] > 0) {
-				$error['user_name'] = MSG06;
+				$err_msg['user_name'] = MSG06;
 			}
 		}
 
@@ -64,12 +63,12 @@ if (!empty($_POST)) {
 			$member -> execute(array($_POST['mail']));
 			$record = $member -> fetch();
 			if ($record['cnt'] > 0) {
-				$error['mail'] = MSG07;
+				$err_msg['mail'] = MSG07;
 			}
 		}
 
 		// 5.年齢が0~99でない場合
-    if (!preg_match("/^[1-9][0-9]$/", $age)) {
+    if (!preg_match("/^[1-9][0-9]?$/", $age)) {
       $err_msg['age'] = MSG08;
     }
 
@@ -97,7 +96,7 @@ if (!empty($_POST)) {
 	}
 	if (empty($err_msg)) {
 		$_SESSION['join'] = $_POST;
-		header("Location: check.php");
+		header("Location: https://believerfuture.000webhostapp.com/check.php");
 		exit();
 	}
 }
@@ -105,7 +104,7 @@ if (!empty($_POST)) {
 //書き直し
 if ($_REQUEST['action'] == 'rewrite') {
 	$_POST = $_SESSION['join'];
-	$error['rewrite'] = true;
+	$err_msg['rewrite'] = true;
 }
  ?>
 
@@ -180,9 +179,8 @@ if ($_REQUEST['action'] == 'rewrite') {
 			<span class="err_msg"><?php if(!empty($err_msg['sex'])) echo $err_msg['sex']; ?></span>
 			<div class="username">
 				<label>性別
-					<input type="radio" name="sex">男
-					<input type="radio" name="sex">女
-					<label><input type="radio" name="sex">その他</label>
+					<input type="radio" name="sex" value="男">男
+					<input type="radio" name="sex" value="女">女
 				</label>
 			</div>
 			<span class="err_msg"><?php if(!empty($err_msg['age'])) echo $err_msg['age']; ?></span>
@@ -200,20 +198,19 @@ if ($_REQUEST['action'] == 'rewrite') {
 			<span class="err_msg"><?php if(!empty($err_msg['password'])) echo $err_msg['password']; ?></span>
 			<div class="entry">
 				<label>パスワード
-					<input placeholder="半角英数6～20文字" type="password" maxlength="20"></input>
+					<input placeholder="半角英数6～20文字" type="password" name="password"></input>
 				</label>
 			</div>
 			<span class="err_msg"><?php if(!empty($err_msg['pass_retype'])) echo $err_msg['pass_retype']; ?></span>
 			<div class="reenter">
 				<label>パスワード再入力
-					<input placeholder="上記のものを再入力" type="password" maxlength="20"></input>
+					<input placeholder="上記のものを再入力" type="password" name="pass_retype"></input>
 				</label>
 			</div>
 			<div class="submit_btn">
 				<input class="btn" type="submit" value="入力内容を確認する">
 			</div>
 		</div>
-	</form>
 </main>
 </body>
 </html>
