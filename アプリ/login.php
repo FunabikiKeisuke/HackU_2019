@@ -3,15 +3,18 @@ require('dbconnect.php');
 
 session_start();
 
-if ($_COOKIE['mail'] != '') {
+error_reporting(E_ALL); // E_STRICTレベル以外のエラーを報告する
+ini_set('display_errors', 'Off'); // 画面にエラーを表示しない
+
+if ($_COOKIE['user_name'] != '') {
 	$_POST['user_name'] = $_COOKIE['user_name'];
 	$_POST['password'] = $_COOKIE['password'];
 	$_POST['save'] = 'on';
 }
 
 if (!empty($_POST)) {
-  define('MSG01', 'ユーザー名とパスワードを入力してください')
-  define('MSG02', '入力が正しくありません')
+  define('MSG01', 'ユーザー名とパスワードを入力してください');
+  define('MSG02', '入力が正しくありません');
 
 	//ログイン処理
 	if ($_POST['user_name'] != '' && $_POST['password'] != '') {
@@ -33,7 +36,7 @@ if (!empty($_POST)) {
 				setcookie('password', $_POST['password'], time() + 60 * 60 * 24 * 14);
 			}
 
-	    header("Location: https://believerfuture.000webhostapp.com/index.php");
+	    header("Location: https://believerfuture.000webhostapp.com");
 			exit();
 		} else {
 			$err_msg['login'] = MSG02;
@@ -119,29 +122,31 @@ if (!empty($_POST)) {
   </header>
   <!-- maincontents -->
   <main>
-    <div class="login">ログイン</div><br>
-    <div class="username">
-      <span class="err_msg"><?php if(!empty($err_msg['login'])) echo $err_msg['login']; ?></span>
-      <label>ユーザー名
-        <input type="user_name" name="user_name" value="<?php echo htmlspecialchars($_POST['user_name'], ENT_QUOTES); ?>">
-      </label>
-    </div>
-    <div class="loginpass">
-      <label>パスワード
-        <input type="password" name="password" value="<?php echo htmlspecialchars($_POST['password'], ENT_QUOTES); ?>">
-      </label>
-    </div>
-    <div class="form-group">
-      <label>ログイン情報の記録</label>
-    </div>
-    <div class="form-group">
-      <input type="checkbox" class="form-control" id="save" name="save" value="on">
-      <label for="save" id="rememberLabel">次回から自動的にログインする</label>
-    </div>
-    <button class="loginbutton" type="submit" href="index.html">ログイン</button>
-    <div class="form-group">
-      <a href="signup.php">新規登録はこちら</a>
-    </div>
+    <h2 class="login">ログイン</h2>
+    <form action="" method="post">
+      <div class="username">
+        <span class="err_msg"><?php if(!empty($err_msg['login'])) echo $err_msg['login']; ?></span>
+        <label>ユーザー名
+          <input type="user_name" name="user_name" value="<?php echo htmlspecialchars($_POST['user_name'], ENT_QUOTES); ?>">
+        </label>
+      </div>
+      <div class="loginpass">
+        <label>パスワード
+          <input type="password" name="password" value="<?php echo htmlspecialchars($_POST['password'], ENT_QUOTES); ?>">
+        </label>
+      </div>
+      <div class="form-group">
+        <label>ログイン情報の記録</label>
+      </div>
+      <div class="form-group">
+        <input type="checkbox" class="form-control" id="save" name="save" value="on">
+        <label for="save" id="rememberLabel">次回から自動的にログインする</label>
+      </div>
+      <input type="submit" class="btn" value="ログイン" href="https://believerfuture.000webhostapp.com"></input>
+      <div class="form-group">
+        <a href="signup.php">新規登録はこちら</a>
+      </div>
+    </form>
   </main>
 </body>
 </html>
