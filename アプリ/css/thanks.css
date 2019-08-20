@@ -2,12 +2,7 @@
 /* common use */
 @import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:300,400,500,700&display=swap');
 
-main{
-		text-align: center;
-		background-color: #f7f7f7;
-		padding: 4em 2em 2em 2em;
-		position: relative;
-}
+
 
 h2{
 	color: #555;
@@ -18,6 +13,27 @@ h2{
     margin-bottom: 20px;
 }
 
+.btn{
+	background-color: #555;
+    color: #f7f7f7;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    margin: 10px;
+    margin-bottom: 25px;
+    padding-top: 10px;
+}
+.entry{
+	display: block;
+	text-align: center;
+	padding: 20px;
+}
+
+.owari{
+	display: block;
+	text-align: center;
+	margin-top: 20px;
+}
 input{
 	background: #f7f7f7;
     border: none;
@@ -27,35 +43,9 @@ input{
     margin: 10px;
 }
 
-.btn{
-	background-color: #555;
-    color: #f7f7f7;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 10px;
-    margin: 10px;
-    margin-bottom: 25px;
-}
-.newUser{
+.widebtn{
 	text-decoration: none;
-	color: #5ce1e6;
-}
-
-span{
-	color: red;
-	display: block;
+	color: white;
 	text-align: center;
-}
-
-label{
 	display: block;
-}
-
-.rememberMe{
-	display: inline-block;
-	margin: 10px;
-}
-
-.box{
-	border-bottom: 2px solid #adadad;
 }
