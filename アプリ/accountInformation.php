@@ -19,10 +19,10 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" href="css/common.css" media="only screen and (min-width:1001px)">
-    <link rel="stylesheet" href="css/index.css" media="only screen and (min-width:1001px)">
+    <link rel="stylesheet" href="css/accountInformation.css" media="only screen and (min-width:1001px)">
     <link rel="stylesheet" href="css/common-sp.css" media="only screen and (max-width:1000px)">
     <link rel="stylesheet" href="css/accountInformation-sp.css" media="only screen and (max-width:1000px)">
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,500,700,900&display=swap&subset=japanese"rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:300,400,500,700&display=swap" rel="stylesheet">
     <!-- og: sns拡散用クリックしたくなるcontentを設定 -->
     <meta property="og:title" content="">
     <meta property="og:type" content="website">
@@ -79,38 +79,23 @@
     </header>
     <!-- maincontents -->
     <article class="inner">
-        <legend>アカウント情報</legend>
-        <div class="form">
-            <label for="inputEmail">今のパスワード</label>
-            <input type="text">
-        </div>
-        <div class="form">
+        <h2>アカウント情報</h2>
+        <div>
             <label for="inputPassword">メールアドレス</label>
-            <input type="email">
+            <input class="box" type="email">
         </div>
-        <div class="form">
+        <div>
+            <label for="inputEmail">今のパスワード</label>
+            <input class="box" type="password">
+        </div>
+        <div>
             <label for="inputPassword">新しいパスワード</label>
-            <input type="password">
+            <input class="box" type="password">
         </div>
-        <div class="form">
-            <button type="submit" href="#">パスワード変更</button>
+        <div class="submit">
+            <input type="submit" class="btn" value="パスワード変更" href="#"></input>
         </div>
-
     </article>
-
-    <!--
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="js/lazyload.min.js"></script>
-  <script>
-    $(function() {
-      $("img.lazyload").lazyload();
-    });
-  </script>
-  <script src="js/fade_scroll.js"></script>
-  <script src="js/menu.js"></script>
-  <script src="js/wd.js"></script>
-  <script>$(document).ready(tgBrowserWidth());</script>
-  -->
 </body>
 
 </html>
