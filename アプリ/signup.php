@@ -150,37 +150,38 @@ if ($_REQUEST['action'] == 'rewrite') {
 <body>
 	<!-- header -->
   <header>
-    <ul>
-      <li class="ico1">
-          <div class="img-wrap">
-            ようこそ！<br>
-            ゲストさん
-          </div>
-      </li>
-      <li class="ico2">
-        <a href="">
-          <div class="img-wrap">
-            <img src="img/hd_logo.png" alt="ロゴ">
-          </div>
+    <div class="hd_box">
+      <h1 class="hd_logo">
+        <a href="index.php">
+          <img src="img/hd_logo.png" alt="FUTUREロゴ">
         </a>
-      </li>
-      <li class="ico3">
-        <a href="">
-          <div class="img-wrap">
-            <img src="img/hd_star.png" alt="星のアイコン">
-          </div>
-          <p>ほしのかけら</p>
-        </a>
-      </li>
-      <li class="ico4">
-        <a href="">
-          <div class="img-wrap">
-            <img src="img/hd_settings.png" alt="設定のアイコン">
-          </div>
-          <p>設定</p>
-        </a>
-      </li>
-    </ul>
+      </h1>
+      <div id="btn">
+        <p>
+          <span>M</span>
+          <span>E</span>
+          <span>N</span>
+          <span>U</span>
+        </p>
+        <i></i>
+        <i></i>
+      </div>
+      <div id="menu">
+        <div class="menu-inner">
+          <ul class="menu_ul">
+            <!--<li>
+            <a href="">ほしのかけら</a>
+          </li>-->
+            <li>
+              <a href="settings.php">設定</a>
+            </li>
+            <li>
+              <a href="logout.php">ログアウト</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </header>
 	<!-- maincontents -->
 	<main>

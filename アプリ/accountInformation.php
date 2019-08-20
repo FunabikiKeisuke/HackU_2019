@@ -11,7 +11,7 @@
     <link rel="preload" href="css/common-sp.css" as="style">
     <link rel="preload" href="css/accountInformation.css" as="style">
     <link rel="preload" href="css/accountInformation-sp.css" as="style">
-    
+
     <!-- SEO対策用 後で設定 -->
     <meta name="description" content="">
     <!-- SEO対策用 後で設定 -->
@@ -42,41 +42,40 @@
 
 <body>
     <!-- header -->
-    <header>
-        <ul>
-            <li class="ico1">
-                <a href="">
-                    <div class="img-wrap">
-                        <img src="img/hd_logout.png" alt="ログアウトのアイコン">
-                    </div>
-                    <p>ログアウト</p>
-                </a>
+  <header>
+    <div class="hd_box">
+      <h1 class="hd_logo">
+        <a href="index.php">
+          <img src="img/hd_logo.png" alt="FUTUREロゴ">
+        </a>
+      </h1>
+      <div id="btn">
+        <p>
+          <span>M</span>
+          <span>E</span>
+          <span>N</span>
+          <span>U</span>
+        </p>
+        <i></i>
+        <i></i>
+      </div>
+      <div id="menu">
+        <div class="menu-inner">
+          <ul class="menu_ul">
+            <!--<li>
+            <a href="">ほしのかけら</a>
+          </li>-->
+            <li>
+              <a href="settings.php">設定</a>
             </li>
-            <li class="ico2">
-                <a href="">
-                    <div class="img-wrap">
-                        <img src="img/hd_logo.png" alt="ロゴ">
-                    </div>
-                </a>
+            <li>
+              <a href="logout.php">ログアウト</a>
             </li>
-            <li class="ico3">
-                <a href="">
-                    <div class="img-wrap">
-                        <img src="img/hd_star.png" alt="星のアイコン">
-                    </div>
-                    <p>ほしのかけら</p>
-                </a>
-            </li>
-            <li class="ico4">
-                <a href="">
-                    <div class="img-wrap">
-                        <img src="img/hd_settings.png" alt="設定のアイコン">
-                    </div>
-                    <p>設定</p>
-                </a>
-            </li>
-        </ul>
-    </header>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
     <!-- maincontents -->
     <article class="inner">
         <h2>アカウント情報</h2>
