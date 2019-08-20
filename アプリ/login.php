@@ -46,21 +46,20 @@ if (!empty($_POST)) {
 	}
 }
  ?>
- 
+
 <!DOCTYPE html>
 <html lang="ja" dir="ltr">
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
 <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:300,400,500,700&display=swap" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="css/login.css">
+
 
   <!-- SEO対策用 後で設定 -->
   <title>アプリ名 | サブタイトル</title>
   <meta charset="utf-8">
   <!-- 読み込み速度向上用 preload -->
   <link rel="preload" href="css/common.css" as="style">
-  <link rel="preload" href="css/index.css" as="style">
   <link rel="preload" href="css/common-sp.css" as="style">
-  <link rel="preload" href="css/index-sp.css" as="style">
+  <link rel="stylesheet" type="text/css" href="css/login.css">
   <!-- SEO対策用 後で設定 -->
   <meta name="description" content="">
   <!-- SEO対策用 後で設定 -->
@@ -68,9 +67,8 @@ if (!empty($_POST)) {
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <meta name="format-detection" content="telephone=no">
   <link rel="stylesheet" href="css/common.css" media="only screen and (min-width:1001px)">
-  <link rel="stylesheet" href="css/index.css" media="only screen and (min-width:1001px)">
   <link rel="stylesheet" href="css/common-sp.css" media="only screen and (max-width:1000px)">
-  <link rel="stylesheet" href="css/index-sp.css" media="only screen and (max-width:1000px)">
+  <link rel="stylesheet" type="text/css" href="css/login.css" media="only screen and (min-width:1001px)">
   <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,500,700,900&display=swap&subset=japanese" rel="stylesheet">
   <link rel="stylesheet" href="css/login.css">
   <!-- og: sns拡散用クリックしたくなるcontentを設定 -->
@@ -125,7 +123,7 @@ if (!empty($_POST)) {
     </ul>
   </header>
   <!-- maincontents -->
-  <main>
+  <main class="inner">
     <section class="mainBox">
       <h2 class="login">ログイン</h2>
       <form action="" method="post">
