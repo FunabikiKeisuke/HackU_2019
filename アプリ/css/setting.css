@@ -1,7 +1,22 @@
-img{
-  height:100px;
-  width:100px;
+ul {
+  text-align: center;
+  display: block;
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+  width:100%;
+  background-color: #f1f1f1;
 }
-.logo{
-  position: absolute;
+
+li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color on hover */
+li a:hover {
+  background-color: #555;
+  color: white;
 }

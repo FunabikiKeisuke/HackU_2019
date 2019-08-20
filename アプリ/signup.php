@@ -112,7 +112,6 @@ if ($_REQUEST['action'] == 'rewrite') {
 <html lang="ja" dir="ltr">
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
 <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:300,400,500,700&display=swap" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="css/signup.css">
   <!-- SEO対策用 後で設定 -->
   <title>アプリ名 | サブタイトル</title>
   <meta charset="utf-8">
@@ -188,41 +187,36 @@ if ($_REQUEST['action'] == 'rewrite') {
 		<section class="mainBox">
 			<h2 class="entry">FUTURE 新規登録</h2>
 			<form action="" method="post" enctype="multipart/form-data">
-				<span class="err_msg"><?php if(!empty($err_msg['user_name'])) echo $err_msg['user_name']; ?></span>
+				<span class="err_msg msgzz"><?php if(!empty($err_msg['user_name'])) echo $err_msg['user_name']; ?></span>
 				<div class="username">
-					<label>ユーザー名
+					<label>ユーザー名</label>
 						<input class="box" type="text" name="user_name">
-					</label>
 				</div>
-				<span class="err_msg"><?php if(!empty($err_msg['sex'])) echo $err_msg['sex']; ?></span>
+				<span class="err_msg msgzz"><?php if(!empty($err_msg['sex'])) echo $err_msg['sex']; ?></span>
 				<div class="username">
-					<label>性別
-						<input type="radio" name="sex" value="男">男
-						<input type="radio" name="sex" value="女">女
-					</label>
+					<label class="gender">性別</label>
+						<input class="gender1" type="radio" name="sex" value="男">男
+						<input class="gender1" type="radio" name="sex" value="女">女
 				</div>
-				<span class="err_msg"><?php if(!empty($err_msg['age'])) echo $err_msg['age']; ?></span>
+				<span class="err_msg msgzz"><?php if(!empty($err_msg['age'])) echo $err_msg['age']; ?></span>
 				<div class="age">
 					<label>年齢</label>
 					<input class="box" type="text" name="age">
 				</div>
-				<span class="err_msg"><?php if(!empty($err_msg['mail'])) echo $err_msg['mail']; ?></span>
+				<span class="err_msg msgzz"><?php if(!empty($err_msg['mail'])) echo $err_msg['mail']; ?></span>
 				<div class="mailaddress">
-					<label>メールアドレス
-						<input class="box" type="text" name="mail">
-					</label>
+					<label>メールアドレス</label>
+					<input class="box" type="text" name="mail">
 				</div>
-				<span class="err_msg"><?php if(!empty($err_msg['password'])) echo $err_msg['password']; ?></span>
+				<span class="err_msg msgzz"><?php if(!empty($err_msg['password'])) echo $err_msg['password']; ?></span>
 				<div class="entry">
-					<label>パスワード
-						<input class="box" placeholder="半角英数6～20文字" type="password" name="password"></input>
-					</label>
+					<label>パスワード</label>
+					<input class="box" placeholder="半角英数6～20文字" type="password" name="password"></input>
 				</div>
-				<span class="err_msg"><?php if(!empty($err_msg['pass_retype'])) echo $err_msg['pass_retype']; ?></span>
+				<span class="err_msg msgzz"><?php if(!empty($err_msg['pass_retype'])) echo $err_msg['pass_retype']; ?></span>
 				<div class="reenter">
-					<label>パスワード再入力
-						<input class="box" placeholder="上記のものを再入力" type="password" name="pass_retype"></input>
-					</label>
+					<label>パスワード再入力</label>
+					<input class="box" placeholder="上記のものを再入力" type="password" name="pass_retype"></input>
 				</div>
 				<div class="submit_btn">
 					<input class="btn" type="submit" value="入力内容を確認する">

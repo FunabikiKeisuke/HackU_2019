@@ -6,7 +6,6 @@
   <title>アプリ名 | サブタイトル</title>
   <meta charset="utf-8">
   <!-- 読み込み速度向上用 preload -->
-  <link rel="preload" href="css/index.css" as="style">
   <link rel="preload" href="css/changePassword.css" as="style">
   <link rel="preload" href="css/changePassword-sp.css" as="style">
   <!-- SEO対策用 後で設定 -->
@@ -16,7 +15,6 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <meta name="format-detection" content="telephone=no">
   <link rel="stylesheet" href="css/changePassword.css" media="only screen and (min-width:1001px)">
-  <link rel="stylesheet" href="css/index-sp.css" media="only screen and (max-width:1000px)">
   <link rel="stylesheet" href="css/changePassword-sp.css" media="only screen and (max-width:1000px)">
   <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,500,700,900&display=swap&subset=japanese" rel="stylesheet">
   <!-- og: sns拡散用クリックしたくなるcontentを設定 -->
@@ -38,51 +36,22 @@
 <body>
   <!-- header -->
   <header>
-    <ul>
-      <li class="ico1">
-        <a href="">
-          <div class="img-wrap">
-            <img src="img/hd_logout.png" alt="ログアウトのアイコン">
-          </div>
-          <p>ログアウト</p>
-        </a>
-      </li>
-      <li class="ico2">
-        <a href="">
-          <div class="img-wrap">
-            <img src="img/hd_logo.png" alt="ロゴ">
-          </div>
-        </a>
-      </li>
-      <li class="ico3">
-        <a href="">
-          <div class="img-wrap">
-            <img src="img/hd_star.png" alt="星のアイコン">
-          </div>
-          <p>ほしのかけら</p>
-        </a>
-      </li>
-      <li class="ico4">
-        <a href="">
-          <div class="img-wrap">
-            <img src="img/hd_settings.png" alt="設定のアイコン">
-          </div>
-          <p>設定</p>
-        </a>
-      </li>
-    </ul>
   </header>
   <!-- maincontents -->
   <main>
   <article class="inner">
     <h2 class="changePass">パスワード変更</h1>
       <div class="currentPass">
-        <label for="Pass">今のパスワード</label>
+        <label>今のパスワード</label>
         <input type="text" name="email" class="box">
       </div>
       <div class="newPass">
-        <label for="Pass">新しいパスワード</label>
+        <label class="Pass">新しいパスワード</label>
         <input type="password" name="password" class="box">
+      </div>
+      <div class="check">
+        <label class="Pass">再確認</label>
+          <input type="password" name="password" class="box">
       </div>
       <div class="submitButton">
         <button type="submit" href="#" class="btn">確認</button>

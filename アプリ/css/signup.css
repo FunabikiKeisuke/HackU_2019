@@ -36,13 +36,15 @@ input{
     padding-bottom: 10px;
     margin: 10px;
     margin-bottom: 25px;
+    padding-top: 10px;
+    margin-top: 25px;
 }
 .newUser{
 	text-decoration: none;
 	color: #5ce1e6;
 }
 
-span{
+.msgzz{
 	color: red;
 	display: block;
 	text-align: center;
@@ -51,6 +53,7 @@ span{
 label{
 	display: inline-block;
     width: 140px;
+    margin-bottom: 10px;
 }
 
 .rememberMe{
@@ -61,4 +64,17 @@ label{
 .box{
 	border-bottom: 2px solid #adadad;
     padding-top: 10px
+}
+
+
+.gender{
+    margin-left: -50px;
+}
+
+.gender1{
+    margin-left: 50px;
+}
+
+.entry{
+    margin-bottom: 20px;
 }

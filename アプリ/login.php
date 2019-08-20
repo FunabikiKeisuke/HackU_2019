@@ -59,8 +59,8 @@ if (!empty($_POST)) {
   <!-- 読み込み速度向上用 preload -->
   <link rel="preload" href="css/common.css" as="style">
   <link rel="preload" href="css/common-sp.css" as="style">
-  <link rel="stylesheet" type="text/css" href="css/login.css">
-  <link rel="stylesheet" type="text/css" href="css/login-sp.css">
+  <link rel="preload" type="text/css" href="css/login.css">
+  <link rel="preload" type="text/css" href="css/login-sp.css">
   <!-- SEO対策用 後で設定 -->
   <meta name="description" content="">
   <!-- SEO対策用 後で設定 -->
@@ -70,7 +70,7 @@ if (!empty($_POST)) {
   <link rel="stylesheet" href="css/common.css" media="only screen and (min-width:1001px)">
   <link rel="stylesheet" href="css/common-sp.css" media="only screen and (max-width:1000px)">
   <link rel="stylesheet" type="text/css" href="css/login.css" media="only screen and (min-width:1001px)">
-  <link rel="stylesheet" type="text/css" href="css/login-sp.css" media="only screen and (min-width:1001px)">
+  <link rel="stylesheet" type="text/css" href="css/login-sp.css" media="only screen and (max-width:1000px)">
   <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,500,700,900&display=swap&subset=japanese" rel="stylesheet">
   <link rel="stylesheet" href="css/login.css">
   <!-- og: sns拡散用クリックしたくなるcontentを設定 -->
@@ -144,7 +144,7 @@ if (!empty($_POST)) {
           <input type="checkbox" class="form-control" id="save" name="save" value="on">
           <label for="save" id="rememberLabel" class="rememberMe">次回から自動的にログインする</label>
         </div>
-        <input type="submit" class="btn" value=ログイン href="https://believerfuture.000webhostapp.com"></input>
+        <input type="submit" class="btn" value="ログイン" href="https://believerfuture.000webhostapp.com"></input>
         <div class="form-group">
           <a href="signup.php" class="newUser">新規登録はこちら</a>
         </div>

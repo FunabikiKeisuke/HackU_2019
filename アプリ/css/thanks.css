@@ -1,24 +1,9 @@
 @charset "utf-8";
 /* common use */
 @import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:300,400,500,700&display=swap');
-header{
-	height:200px;
-	width:100%;
-}
-main{
-		text-align: center;
-		background-color: #f7f7f7;
-		padding: 4em 2em 2em 2em;
-		position: relative;
-}
-label{
-	width:140px;
-	display: inline-block;
-}
-.Pass{
-	margin-top:20px;
-	padding-top:20px;
-}
+
+
+
 h2{
 	color: #555;
     display: inline-block;
@@ -28,34 +13,39 @@ h2{
     margin-bottom: 20px;
 }
 
+.btn{
+	background-color: #555;
+    color: #f7f7f7;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    margin: 10px;
+    margin-bottom: 25px;
+    padding-top: 10px;
+}
+.entry{
+	display: block;
+	text-align: center;
+	padding: 20px;
+}
+
+.owari{
+	display: block;
+	text-align: center;
+	margin-top: 20px;
+}
 input{
 	background: #f7f7f7;
     border: none;
     text-decoration: none;
     padding-top: 10px;
     font-size: 18px;
-}
-
-.btn{
-	background-color: #555;
-    color: #f7f7f7;
-		padding-top:10px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 10px;
     margin: 10px;
-    margin-bottom: 25px;
 }
 
-span{
-	color: red;
-	display: block;
+.widebtn{
+	text-decoration: none;
+	color: white;
 	text-align: center;
-}
-
-.box{
-	border-bottom: 2px solid #adadad;
-}
-.submitButton{
-	margin-top:20px;
+	display: block;
 }

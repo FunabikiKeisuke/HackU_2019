@@ -19,7 +19,8 @@
   <link rel="stylesheet" href="css/index.css" media="only screen and (min-width:1001px)">
   <link rel="stylesheet" href="css/common-sp.css" media="only screen and (max-width:1000px)">
   <link rel="stylesheet" href="css/index-sp.css" media="only screen and (max-width:1000px)">
-  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,500,700,900&display=swap&subset=japanese" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:300,400,500,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Audiowide&display=swap&subset=latin-ext" rel="stylesheet">
   <!-- og: sns拡散用クリックしたくなるcontentを設定 -->
   <meta property="og:title" content="">
   <meta property="og:type" content="website">
@@ -74,21 +75,19 @@
     </ul>
   </header>
   <!-- maincontents -->
-<div class="welcome">
-  〇〇〇を始めよう！
-</div>
-<br>
-<br>
-<div class="explanation">
-  〇〇〇〇は質問に答えるだけで<br>
-  あなたのことを分析！<br>
-  毎日答えて、星のかけらをゲットしよう！<br>
-  また実績リストで<br>
-  あなたの行動パターンを見極めよう。
-</div>
-<br>
-<input type="submit" name="会員登録" value="無料会員登録をして始める">
-<br>
-<input type="submit" name="ログイン" value="すでに登録済みの方はこちらから">
+ <head>
+   <div class="logo">
+     FUTURE
+   </div>
+   <p>手軽にできる自己分析</p>
+   <p>新規登録はこちら</p>
+   <div class="btn">
+     <a href="signup.php">新規登録</a>
+   </div>
+   <p>既に登録済みの方はこちらから</p>
+   <div class="btn">
+   <a href="login.php">ログイン</a>
+   </div>
+ </head>
   </body>
 </html>
