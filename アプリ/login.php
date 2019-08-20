@@ -46,9 +46,13 @@ if (!empty($_POST)) {
 	}
 }
  ?>
+ 
 <!DOCTYPE html>
 <html lang="ja" dir="ltr">
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+<link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:300,400,500,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/login.css">
+
   <!-- SEO対策用 後で設定 -->
   <title>アプリ名 | サブタイトル</title>
   <meta charset="utf-8">
@@ -122,31 +126,30 @@ if (!empty($_POST)) {
   </header>
   <!-- maincontents -->
   <main>
-    <h2 class="login">ログイン</h2>
-    <form action="" method="post">
-      <div class="username">
-        <span class="err_msg"><?php if(!empty($err_msg['login'])) echo $err_msg['login']; ?></span>
-        <label>ユーザー名
-          <input type="user_name" name="user_name" value="<?php echo htmlspecialchars($_POST['user_name'], ENT_QUOTES); ?>">
-        </label>
-      </div>
-      <div class="loginpass">
-        <label>パスワード
-          <input type="password" name="password" value="<?php echo htmlspecialchars($_POST['password'], ENT_QUOTES); ?>">
-        </label>
-      </div>
-      <div class="form-group">
-        <label>ログイン情報の記録</label>
-      </div>
-      <div class="form-group">
-        <input type="checkbox" class="form-control" id="save" name="save" value="on">
-        <label for="save" id="rememberLabel">次回から自動的にログインする</label>
-      </div>
-      <input type="submit" class="btn" value="ログイン" href="https://believerfuture.000webhostapp.com"></input>
-      <div class="form-group">
-        <a href="signup.php">新規登録はこちら</a>
-      </div>
-    </form>
+    <section class="mainBox">
+      <h2 class="login">ログイン</h2>
+      <form action="" method="post">
+        <div class="username">
+          <span class="err_msg"><?php if(!empty($err_msg['login'])) echo $err_msg['login']; ?></span>
+          <label>ユーザー名
+            <input class="box" type="user_name" name="user_name" value="<?php echo htmlspecialchars($_POST['user_name'], ENT_QUOTES); ?>">
+          </label>
+        </div>
+        <div class="loginpass">
+          <label>パスワード
+            <input class="box" type="password" name="password" value="<?php echo htmlspecialchars($_POST['password'], ENT_QUOTES); ?>">
+          </label>
+        </div>
+        <div class="form-group">
+          <input type="checkbox" class="form-control" id="save" name="save" value="on">
+          <label for="save" id="rememberLabel" class="rememberMe">次回から自動的にログインする</label>
+        </div>
+        <input type="submit" class="btn" value=ログイン href="https://believerfuture.000webhostapp.com"></input>
+        <div class="form-group">
+          <a href="signup.php" class="newUser">新規登録はこちら</a>
+        </div>
+      </form>
+    </section>
   </main>
 </body>
 </html>
