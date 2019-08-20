@@ -21,16 +21,27 @@ border-style:dotted;
 margin-top:30px;
 margin-bottom: 20px;
 }
-ul{
-	text-align: center;
-}
 li{
 	margin-left: 20px;
 	float:left;
 }
 input{
-	margin-left:15px;
-	margin-bottom:20px;
+	margin-bottom:10px;
+}
+.a{
+	margin-left: 30px;
+}
+.i{
+	margin-left: 80px;
+}
+.u{
+	margin-left: 10px;
+}
+.e{
+	margin-left: 90px;
+}
+.o{
+	margin-left: 40px;
 }
 .next{
 	text-align: center;
