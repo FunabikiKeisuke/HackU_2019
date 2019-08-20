@@ -1,10 +1,17 @@
 <?php
+require('dbconnect.php');
+
+session_start();
+
+error_reporting(E_ALL); // E_STRICTレベル以外のエラーを報告する
+ini_set('display_errors', 'Off'); // 画面にエラーを表示しない
+
 // ログイン判定
 if (isset($_SESSION['id']) && $_SESSION['time'] + 3600 > time()) {
 	// ログインしている
 	$_SESSION['time'] = time();
 
-	$members = $db->prepare('SELECT * FROM members WHERE id=?');
+	$members = $db->prepare('SELECT * FROM users WHERE id=?');
 	$members->execute(array($_SESSION['id']));
 	$member = $members->fetch();
 } else {
@@ -94,7 +101,7 @@ if (isset($_SESSION['id']) && $_SESSION['time'] + 3600 > time()) {
     <div class="contentbox">
       <a href="">
         <div class="img-wrap">
-          <img src="img/index/notebook.png" alt="ノートのアイコン">
+          <img src="img/index/1.png" alt="クエスチョンマークのアイコン">
         </div>
         <h2>質問ノート</h2>
       </a>
@@ -102,7 +109,7 @@ if (isset($_SESSION['id']) && $_SESSION['time'] + 3600 > time()) {
     <div class="contentbox">
       <a href="">
         <div class="img-wrap">
-          <img src="img/index/graph.png" alt="グラフのアイコン">
+          <img src="img/index/2.png" alt="グラフのアイコン">
         </div>
         <h2>分析</h2>
       </a>
@@ -110,7 +117,7 @@ if (isset($_SESSION['id']) && $_SESSION['time'] + 3600 > time()) {
     <div class="contentbox">
       <a href="">
         <div class="img-wrap">
-          <img src="img/index/list.png" alt="リストのアイコン">
+          <img src="img/index/3.png" alt="リストのアイコン">
         </div>
         <h2>実績リスト</h2>
       </a>
@@ -118,7 +125,7 @@ if (isset($_SESSION['id']) && $_SESSION['time'] + 3600 > time()) {
     <div class="contentbox">
       <a href="">
         <div class="img-wrap">
-          <img src="img/index/star.png" alt="天体の画像">
+          <img src="img/index/4.png" alt="天体の画像">
         </div>
         <h2>天体</h2>
       </a>

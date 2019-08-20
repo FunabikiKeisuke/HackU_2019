@@ -1,6 +1,6 @@
 @charset "utf-8";
 /* common use */
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,500,700,900&display=swap&subset=japanese');
+@import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:300,400,500,700&display=swap');
 html {
 	height:100%;
 	-webkit-text-size-adjust:100%;
@@ -11,7 +11,7 @@ body {
 	height:100%;
 	margin:0;
 	padding:0;
-	font-family: 'Noto Sans JP', sans-serif;
+	font-family: 'M PLUS Rounded 1c', sans-serif;
 	font-weight: 300;
 	color:#181800;
 	overflow-x: hidden;
