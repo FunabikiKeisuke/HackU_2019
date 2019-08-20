@@ -36,6 +36,38 @@
 <body>
   <!-- header -->
   <header>
+    <div class="hd_box">
+      <h1 class="hd_logo">
+        <a href="index.php">
+          <img src="img/hd_logo.png" alt="FUTUREロゴ">
+        </a>
+      </h1>
+      <div id="btn">
+        <p>
+          <span>M</span>
+          <span>E</span>
+          <span>N</span>
+          <span>U</span>
+        </p>
+        <i></i>
+        <i></i>
+      </div>
+      <div id="menu">
+        <div class="menu-inner">
+          <ul class="menu_ul">
+            <!--<li>
+            <a href="">ほしのかけら</a>
+          </li>-->
+            <li>
+              <a href="settings.php">設定</a>
+            </li>
+            <li>
+              <a href="logout.php">ログアウト</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </header>
   <!-- maincontents -->
   <main>

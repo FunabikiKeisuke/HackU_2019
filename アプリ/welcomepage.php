@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- 読み込み速度向上用 preload -->
   <link rel="preload" href="css/common.css" as="style">
-  <link rel="preload" href="css/index.css" as="style">
+  <link rel="preload" href="css/welcomepage.css" as="style">
   <link rel="preload" href="css/common-sp.css" as="style">
   <link rel="preload" href="css/index-sp.css" as="style">
   <!-- SEO対策用 後で設定 -->
@@ -16,7 +16,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <meta name="format-detection" content="telephone=no">
   <link rel="stylesheet" href="css/common.css" media="only screen and (min-width:1001px)">
-  <link rel="stylesheet" href="css/index.css" media="only screen and (min-width:1001px)">
+  <link rel="stylesheet" href="css/welcomepage.css" media="only screen and (min-width:1001px)">
   <link rel="stylesheet" href="css/common-sp.css" media="only screen and (max-width:1000px)">
   <link rel="stylesheet" href="css/index-sp.css" media="only screen and (max-width:1000px)">
   <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:300,400,500,700&display=swap" rel="stylesheet">
@@ -40,54 +40,62 @@
 <body>
   <!-- header -->
   <header>
-    <ul>
-      <li class="ico1">
-        <a href="">
-          <div class="img-wrap">
-            <img src="img/hd_logout.png" alt="ログアウトのアイコン">
-          </div>
-          <p>ログアウト</p>
+    <div class="hd_box">
+      <h1 class="hd_logo">
+        <a href="index.php">
+          <img src="img/hd_logo.png" alt="FUTUREロゴ">
         </a>
-      </li>
-      <li class="ico2">
-        <a href="">
-          <div class="img-wrap">
-            <img src="img/hd_logo.png" alt="ロゴ">
-          </div>
-        </a>
-      </li>
-      <li class="ico3">
-        <a href="">
-          <div class="img-wrap">
-            <img src="img/hd_star.png" alt="星のアイコン">
-          </div>
-          <p>ほしのかけら</p>
-        </a>
-      </li>
-      <li class="ico4">
-        <a href="">
-          <div class="img-wrap">
-            <img src="img/hd_settings.png" alt="設定のアイコン">
-          </div>
-          <p>設定</p>
-        </a>
-      </li>
-    </ul>
+      </h1>
+      <div id="btn">
+        <p>
+          <span>M</span>
+          <span>E</span>
+          <span>N</span>
+          <span>U</span>
+        </p>
+        <i></i>
+        <i></i>
+      </div>
+      <div id="menu">
+        <div class="menu-inner">
+          <ul class="menu_ul">
+            <!--<li>
+            <a href="">ほしのかけら</a>
+          </li>-->
+            <li>
+              <a href="settings.php">設定</a>
+            </li>
+            <li>
+              <a href="logout.php">ログアウト</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </header>
   <!-- maincontents -->
- <head>
+ <main class="inner">
    <div class="logo">
      FUTURE
    </div>
-   <p>手軽にできる自己分析</p>
-   <p>新規登録はこちら</p>
-   <div class="btn">
-     <a href="signup.php">新規登録</a>
+   <p class="title">
+     手軽にできる自己分析ツール<br>
+     自分の心を理解しましょう。
+   </p>
+   <div class="abc">
+   <div class="sinup">
+      <p>新規登録はこちら</p>
+      <div class="btn">
+      <a href="signup.php">新規登録</a>
+      </div>
    </div>
-   <p>既に登録済みの方はこちらから</p>
-   <div class="btn">
-   <a href="login.php">ログイン</a>
+   <div class="sinin">
+      <p>既に登録済みの方はこちらから</p>
+      <div class="btn">
+      <a href="login.php">ログイン</a>
+      </div>
    </div>
- </head>
+   </div>
+</main>
   </body>
 </html>

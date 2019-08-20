@@ -40,24 +40,40 @@
 </head>
 <body>
 	<!-- header -->
-	<header>
-		<ul>
-			<li class="ico1">
-				<a href="">
-					<div class="gest">
-						<p>ようこそ！<br>ゲストさん</p>
-					</div>
-				</a>
-			</li>
-			<li class="ico2">
-				<a href="">
-					<div class="img-wrap">
-						<img src="img/hd_logo.png" alt="ロゴ">
-					</div>
-				</a>
-			</li>
-		</ul>
-	</header>
+  <header>
+    <div class="hd_box">
+      <h1 class="hd_logo">
+        <a href="index.php">
+          <img src="img/hd_logo.png" alt="FUTUREロゴ">
+        </a>
+      </h1>
+      <div id="btn">
+        <p>
+          <span>M</span>
+          <span>E</span>
+          <span>N</span>
+          <span>U</span>
+        </p>
+        <i></i>
+        <i></i>
+      </div>
+      <div id="menu">
+        <div class="menu-inner">
+          <ul class="menu_ul">
+            <!--<li>
+            <a href="">ほしのかけら</a>
+          </li>-->
+            <li>
+              <a href="settings.php">設定</a>
+            </li>
+            <li>
+              <a href="logout.php">ログアウト</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
 	<!-- maincontents -->
 	<main>
 		<h2 class="entry">登録完了</h2>

@@ -60,25 +60,36 @@ header ul li a p {
   color: #181800;
   text-align: center;
 }
-
-.inner {
-  width: 1000px;
-  height: 91vh;
-  margin: 0 auto;
-  padding: 200px 20px;
-  background: #f7f7f7;
-}
 .logo{
   font-family: 'Audiowide', cursive;
-  font-size: 18px;
+  font-size: 38px;
+  padding:12px;
+  letter-spacing: 0.1em;
 }
-p {
-  margin:10px auto;
+
+.inner{
+  text-align: center;
+  width: 1000px;
+  margin: 0 auto;
+  padding: 50px 20px 300px 20px;
+  background: #f7f7f7;
+  font-size:16px;
+  background: url(../img/notebook.jpg) no-repeat center;
+  background-size: cover;
 }
-head  {
-    font-weight: 400;
-    line-height: 1.5;
-    margin: 0 0 1em 0;
-    text-transform: uppercase;
-    letter-spacing: 0.375rem;
+.inner p {
+  text-align: center;
+  margin:20px;
+  font-size:18px;
+}
+.btn {
+  margin: 5px 0px 32px 0px;
+  font-size:18px;
+  
+}
+.inner p.title{
+  font-size:22px;
+}
+.abc{
+  margin: auto;
 }

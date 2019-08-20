@@ -2,6 +2,7 @@
 <html lang="ja">
 <!-- Open Graph Protcol(topページ以外はwebsiteをarticleへ変更) -->
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+<link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:300,400,500,700&display=swap" rel="stylesheet">
   <!-- SEO対策用 後で設定 -->
   <title>アプリ名 | サブタイトル</title>
   <meta charset="utf-8">
@@ -19,7 +20,7 @@
   <link rel="stylesheet" href="css/index.css" media="only screen and (min-width:1001px)">
   <link rel="stylesheet" href="css/jissekiList.css" media="only screen and (min-width:1001px)">
   <link rel="stylesheet" href="css/index.css" media="only screen and (max-width:1000px)">
-  <link rel="stylesheet" href="css/jissekiList-sp.css" media="only screen and (max-width:1000px)">  
+  <link rel="stylesheet" href="css/jissekiList-sp.css" media="only screen and (max-width:1000px)">
   <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,500,700,900&display=swap&subset=japanese" rel="stylesheet">
   <!-- og: sns拡散用クリックしたくなるcontentを設定 -->
   <meta property="og:title" content="">
@@ -40,63 +41,68 @@
 <body>
   <!-- header -->
   <header>
-    <ul>
-      <li class="ico1">
-        <a href="">
-          <div class="img-wrap">
-            <img src="img/hd_logout.png" alt="ログアウトのアイコン">
-          </div>
-          <p>ログアウト</p>
+    <div class="hd_box">
+      <h1 class="hd_logo">
+        <a href="index.php">
+          <img src="img/hd_logo.png" alt="FUTUREロゴ">
         </a>
-      </li>
-      <li class="ico2">
-        <a href="">
-          <div class="img-wrap">
-            <img src="img/hd_logo.png" alt="ロゴ">
-          </div>
-        </a>
-      </li>
-      <li class="ico3">
-        <a href="">
-          <div class="img-wrap">
-            <img src="img/hd_star.png" alt="星のアイコン">
-          </div>
-          <p>ほしのかけら</p>
-        </a>
-      </li>
-      <li class="ico4">
-        <a href="">
-          <div class="img-wrap">
-            <img src="img/hd_settings.png" alt="設定のアイコン">
-          </div>
-          <p>設定</p>
-        </a>
-      </li>
-    </ul>
+      </h1>
+      <div id="btn">
+        <p>
+          <span>M</span>
+          <span>E</span>
+          <span>N</span>
+          <span>U</span>
+        </p>
+        <i></i>
+        <i></i>
+      </div>
+      <div id="menu">
+        <div class="menu-inner">
+          <ul class="menu_ul">
+            <!--<li>
+            <a href="">ほしのかけら</a>
+          </li>-->
+            <li>
+              <a href="settings.php">設定</a>
+            </li>
+            <li>
+              <a href="logout.php">ログアウト</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </header>
   <!-- maincontents -->
     <article class="inner">
-        <div class="top">
-            <h2 class="center">実績リスト</h2>
-            <a href="#" class="right">+</a>
-        </div>
-        <div class="row">
-            <div>
-                <p>・</p>
-            </div>
+        <h2 class="center">実績リスト<a href="#popup1" class="right">+</a></h2>
 
-            <div>
-                <p>・</p>
-            </div>
 
-            <div>
-                <p>・</p>
+        <div id="popup1" class="overlay">
+          <div class="popup">
+            <h3>新規リスト作成</h3>
+            <a class="close" href="#">&times;</a>
+            <div class="content">
+              <div class="form-control">
+                <textarea name="message" id="message" rows="10" cols="4"></textarea>
+              </div>
+              <input type="submit" class="btn" value="作成" href="https://believerfuture.000webhostapp.com"></input>
             </div>
-        
-            <div>
-                <p>・</p>
-            </div>
+          </div>
         </div>
+
+
+
+        <ul>
+          <li class="row">・</li>
+          <li class="row">・</li>
+          <li class="row">・</li>
+          <li class="row">・</li>
+          <li class="row">・</li>
+        </ul>
+
+
     </article>
 </script>
 </body>
