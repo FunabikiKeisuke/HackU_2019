@@ -1,59 +1,5 @@
 @charset "utf-8";
 /* index */
-header ul {
-  width: 100.0vw;
-  height: 16vw;
-  position: relative;
-  background: #dfdfdf;
-  font-size: 0;
-}
-header ul li {
-  display: inline-block;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-header ul li.ico1 {
-  left: 3.90625vw;
-}
-header ul li.ico2 {
-  left: 26.0416666667vw;
-}
-header ul li.ico3 {
-  right: 15.625vw;
-}
-header ul li.ico4 {
-  right: 3.90625vw;
-}
-header ul li a {
-  display: block;
-  width: 100%;
-  text-decoration: none;
-}
-header .img-wrap {
-  text-align: center;
-  margin-bottom: 1.30208333333vw;
-}
-header .ico2 .img-wrap {
-  margin-bottom: 0;
-}
-header ul li a img {
-  width: auto;
-  height: 7.8125vw;
-  text-align: center;
-}
-header ul li.ico2 a img {
-  height: 13.0208333333vw;
-}
-header ul li a p {
-  font-size: 3.125vw;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  color: #181800;
-  text-align: center;
-}
-
-
 .inner {
 	padding: 10.53125vw 5.20833333333vw;
   font-size: 0;
