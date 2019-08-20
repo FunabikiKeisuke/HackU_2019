@@ -1,0 +1,62 @@
+@charset "utf-8";
+/* common use */
+@import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:300,400,500,700&display=swap');
+
+main{
+		text-align: center;
+		background-color: #f7f7f7;
+		padding: 4em 2em 2em 2em;
+		position: relative;
+}
+
+h2{
+	color: #555;
+    display: inline-block;
+    padding-bottom: 0.4em;
+    border-bottom-style: double;
+    border-bottom-width: 1.04166666667vw;
+    margin-bottom: 5.20833333333vw;
+}
+
+input{
+	background: #f7f7f7;
+    border: none;
+    text-decoration: none;
+    padding-top: 2.60416666667vw;
+    padding-top: 2.60416666667vw;
+    font-size: 4.6875vw;
+    margin: 2.60416666667vw;
+}
+
+.btn{
+	background-color: #555;
+    color: #f7f7f7;
+    padding-left: 5.20833333333vw;
+    padding-right: 5.20833333333vw;
+    padding-bottom: 2.60416666667vw;
+    margin: 2.60416666667vw;
+    margin-bottom: 6.51041666667vw;
+}
+.newUser{
+	text-decoration: none;
+	color: #5ce1e6;
+}
+
+span{
+	color: red;
+	display: block;
+	text-align: center;
+}
+
+label{
+	display: block;
+}
+
+.rememberMe{
+	display: inline-block;
+	margin: 2.60416666667vw;
+}
+
+.box{
+	border-bottom: 0.520833333333vw solid #adadad;
+}
