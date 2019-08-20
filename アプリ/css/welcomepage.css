@@ -75,3 +75,10 @@ header ul li a p {
 p {
   margin:10px auto;
 }
+head  {
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0 0 1em 0;
+    text-transform: uppercase;
+    letter-spacing: 0.375rem;
+}

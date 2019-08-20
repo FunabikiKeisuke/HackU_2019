@@ -75,17 +75,19 @@
     </ul>
   </header>
   <!-- maincontents -->
-<div class="logo">
-  FUTURE
-</div>
-<p>手軽にできる自己分析</p>
-<p>新規登録はこちら</p>
-<div class="btn">
-  <a href="signup.php">新規登録</a>
-</div>
-<p>既に登録済みの方はこちらから</p>
-<div class="btn">
-  <a href="login.php">ログイン</a>
-</div>
+ <head>
+   <div class="logo">
+     FUTURE
+   </div>
+   <p>手軽にできる自己分析</p>
+   <p>新規登録はこちら</p>
+   <div class="btn">
+     <a href="signup.php">新規登録</a>
+   </div>
+   <p>既に登録済みの方はこちらから</p>
+   <div class="btn">
+   <a href="login.php">ログイン</a>
+   </div>
+ </head>
   </body>
 </html>
