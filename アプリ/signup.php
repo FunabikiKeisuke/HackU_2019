@@ -191,7 +191,7 @@ if ($_REQUEST['action'] == 'rewrite') {
 				<span class="err_msg"><?php if(!empty($err_msg['user_name'])) echo $err_msg['user_name']; ?></span>
 				<div class="username">
 					<label>ユーザー名
-						<input type="text" name="user_name">
+						<input class="box" type="text" name="user_name">
 					</label>
 				</div>
 				<span class="err_msg"><?php if(!empty($err_msg['sex'])) echo $err_msg['sex']; ?></span>
@@ -203,26 +203,25 @@ if ($_REQUEST['action'] == 'rewrite') {
 				</div>
 				<span class="err_msg"><?php if(!empty($err_msg['age'])) echo $err_msg['age']; ?></span>
 				<div class="age">
-					<label>年齢
-						<input type="text" name="age">
-					</label>
+					<label>年齢</label>
+					<input class="box" type="text" name="age">
 				</div>
 				<span class="err_msg"><?php if(!empty($err_msg['mail'])) echo $err_msg['mail']; ?></span>
 				<div class="mailaddress">
 					<label>メールアドレス
-						<input type="text" name="mail">
+						<input class="box" type="text" name="mail">
 					</label>
 				</div>
 				<span class="err_msg"><?php if(!empty($err_msg['password'])) echo $err_msg['password']; ?></span>
 				<div class="entry">
 					<label>パスワード
-						<input placeholder="半角英数6～20文字" type="password" name="password"></input>
+						<input class="box" placeholder="半角英数6～20文字" type="password" name="password"></input>
 					</label>
 				</div>
 				<span class="err_msg"><?php if(!empty($err_msg['pass_retype'])) echo $err_msg['pass_retype']; ?></span>
 				<div class="reenter">
 					<label>パスワード再入力
-						<input placeholder="上記のものを再入力" type="password" name="pass_retype"></input>
+						<input class="box" placeholder="上記のものを再入力" type="password" name="pass_retype"></input>
 					</label>
 				</div>
 				<div class="submit_btn">
