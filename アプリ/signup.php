@@ -111,6 +111,8 @@ if ($_REQUEST['action'] == 'rewrite') {
 <!DOCTYPE html>
 <html lang="ja" dir="ltr">
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+<link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:300,400,500,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/signup.css">
   <!-- SEO対策用 後で設定 -->
   <title>アプリ名 | サブタイトル</title>
   <meta charset="utf-8">
@@ -148,69 +150,85 @@ if ($_REQUEST['action'] == 'rewrite') {
 </head>
 <body>
 	<!-- header -->
-	<header>
-		<ul>
-			<li class="ico1">
-				<a href="">
-					<div class="gest">
-						<p>ようこそ！<br>ゲストさん</p>
-					</div>
-				</a>
-			</li>
-			<li class="ico2">
-				<a href="">
-					<div class="img-wrap">
-						<img src="img/hd_logo.png" alt="ロゴ">
-					</div>
-				</a>
-			</li>
-		</ul>
-	</header>
+  <header>
+    <ul>
+      <li class="ico1">
+          <div class="img-wrap">
+            ようこそ！<br>
+            ゲストさん
+          </div>
+      </li>
+      <li class="ico2">
+        <a href="">
+          <div class="img-wrap">
+            <img src="img/hd_logo.png" alt="ロゴ">
+          </div>
+        </a>
+      </li>
+      <li class="ico3">
+        <a href="">
+          <div class="img-wrap">
+            <img src="img/hd_star.png" alt="星のアイコン">
+          </div>
+          <p>ほしのかけら</p>
+        </a>
+      </li>
+      <li class="ico4">
+        <a href="">
+          <div class="img-wrap">
+            <img src="img/hd_settings.png" alt="設定のアイコン">
+          </div>
+          <p>設定</p>
+        </a>
+      </li>
+    </ul>
+  </header>
 	<!-- maincontents -->
 	<main>
-		<h2 class="entry">FUTURE 新規登録</h2>
-		<form action="" method="post" enctype="multipart/form-data">
-			<span class="err_msg"><?php if(!empty($err_msg['user_name'])) echo $err_msg['user_name']; ?></span>
-			<div class="username">
-				<label>ユーザー名
-					<input type="text" name="user_name">
-				</label>
-			</div>
-			<span class="err_msg"><?php if(!empty($err_msg['sex'])) echo $err_msg['sex']; ?></span>
-			<div class="username">
-				<label>性別
-					<input type="radio" name="sex" value="男">男
-					<input type="radio" name="sex" value="女">女
-				</label>
-			</div>
-			<span class="err_msg"><?php if(!empty($err_msg['age'])) echo $err_msg['age']; ?></span>
-			<div class="age">
-				<label>年齢
-					<input type="text" name="age">
-				</label>
-			</div>
-			<span class="err_msg"><?php if(!empty($err_msg['mail'])) echo $err_msg['mail']; ?></span>
-			<div class="mailaddress">
-				<label>メールアドレス
-					<input type="text" name="mail">
-				</label>
-			</div>
-			<span class="err_msg"><?php if(!empty($err_msg['password'])) echo $err_msg['password']; ?></span>
-			<div class="entry">
-				<label>パスワード
-					<input placeholder="半角英数6～20文字" type="password" name="password"></input>
-				</label>
-			</div>
-			<span class="err_msg"><?php if(!empty($err_msg['pass_retype'])) echo $err_msg['pass_retype']; ?></span>
-			<div class="reenter">
-				<label>パスワード再入力
-					<input placeholder="上記のものを再入力" type="password" name="pass_retype"></input>
-				</label>
-			</div>
-			<div class="submit_btn">
-				<input class="btn" type="submit" value="入力内容を確認する">
-			</div>
-		</form>
+		<section class="mainBox">
+			<h2 class="entry">FUTURE 新規登録</h2>
+			<form action="" method="post" enctype="multipart/form-data">
+				<span class="err_msg"><?php if(!empty($err_msg['user_name'])) echo $err_msg['user_name']; ?></span>
+				<div class="username">
+					<label>ユーザー名
+						<input class="box" type="text" name="user_name">
+					</label>
+				</div>
+				<span class="err_msg"><?php if(!empty($err_msg['sex'])) echo $err_msg['sex']; ?></span>
+				<div class="username">
+					<label>性別
+						<input type="radio" name="sex" value="男">男
+						<input type="radio" name="sex" value="女">女
+					</label>
+				</div>
+				<span class="err_msg"><?php if(!empty($err_msg['age'])) echo $err_msg['age']; ?></span>
+				<div class="age">
+					<label>年齢</label>
+					<input class="box" type="text" name="age">
+				</div>
+				<span class="err_msg"><?php if(!empty($err_msg['mail'])) echo $err_msg['mail']; ?></span>
+				<div class="mailaddress">
+					<label>メールアドレス
+						<input class="box" type="text" name="mail">
+					</label>
+				</div>
+				<span class="err_msg"><?php if(!empty($err_msg['password'])) echo $err_msg['password']; ?></span>
+				<div class="entry">
+					<label>パスワード
+						<input class="box" placeholder="半角英数6～20文字" type="password" name="password"></input>
+					</label>
+				</div>
+				<span class="err_msg"><?php if(!empty($err_msg['pass_retype'])) echo $err_msg['pass_retype']; ?></span>
+				<div class="reenter">
+					<label>パスワード再入力
+						<input class="box" placeholder="上記のものを再入力" type="password" name="pass_retype"></input>
+					</label>
+				</div>
+				<div class="submit_btn">
+					<input class="btn" type="submit" value="入力内容を確認する">
+				</div>
+			</form>
+		</section>
 </main>
 </body>
 </html>

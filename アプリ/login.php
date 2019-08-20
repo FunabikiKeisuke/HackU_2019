@@ -46,17 +46,21 @@ if (!empty($_POST)) {
 	}
 }
  ?>
+
 <!DOCTYPE html>
 <html lang="ja" dir="ltr">
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+<link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:300,400,500,700&display=swap" rel="stylesheet">
+
+
   <!-- SEO対策用 後で設定 -->
   <title>アプリ名 | サブタイトル</title>
   <meta charset="utf-8">
   <!-- 読み込み速度向上用 preload -->
   <link rel="preload" href="css/common.css" as="style">
-  <link rel="preload" href="css/index.css" as="style">
   <link rel="preload" href="css/common-sp.css" as="style">
-  <link rel="preload" href="css/index-sp.css" as="style">
+  <link rel="stylesheet" type="text/css" href="css/login.css">
+  <link rel="stylesheet" type="text/css" href="css/login-sp.css">
   <!-- SEO対策用 後で設定 -->
   <meta name="description" content="">
   <!-- SEO対策用 後で設定 -->
@@ -64,9 +68,9 @@ if (!empty($_POST)) {
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <meta name="format-detection" content="telephone=no">
   <link rel="stylesheet" href="css/common.css" media="only screen and (min-width:1001px)">
-  <link rel="stylesheet" href="css/index.css" media="only screen and (min-width:1001px)">
   <link rel="stylesheet" href="css/common-sp.css" media="only screen and (max-width:1000px)">
-  <link rel="stylesheet" href="css/index-sp.css" media="only screen and (max-width:1000px)">
+  <link rel="stylesheet" type="text/css" href="css/login.css" media="only screen and (min-width:1001px)">
+  <link rel="stylesheet" type="text/css" href="css/login-sp.css" media="only screen and (min-width:1001px)">
   <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,500,700,900&display=swap&subset=japanese" rel="stylesheet">
   <link rel="stylesheet" href="css/login.css">
   <!-- og: sns拡散用クリックしたくなるcontentを設定 -->
@@ -121,32 +125,31 @@ if (!empty($_POST)) {
     </ul>
   </header>
   <!-- maincontents -->
-  <main>
-    <h2 class="login">ログイン</h2>
-    <form action="" method="post">
-      <div class="username">
-        <span class="err_msg"><?php if(!empty($err_msg['login'])) echo $err_msg['login']; ?></span>
-        <label>ユーザー名
-          <input type="user_name" name="user_name" value="<?php echo htmlspecialchars($_POST['user_name'], ENT_QUOTES); ?>">
-        </label>
-      </div>
-      <div class="loginpass">
-        <label>パスワード
-          <input type="password" name="password" value="<?php echo htmlspecialchars($_POST['password'], ENT_QUOTES); ?>">
-        </label>
-      </div>
-      <div class="form-group">
-        <label>ログイン情報の記録</label>
-      </div>
-      <div class="form-group">
-        <input type="checkbox" class="form-control" id="save" name="save" value="on">
-        <label for="save" id="rememberLabel">次回から自動的にログインする</label>
-      </div>
-      <input type="submit" class="btn" value="ログイン" href="https://believerfuture.000webhostapp.com"></input>
-      <div class="form-group">
-        <a href="signup.php">新規登録はこちら</a>
-      </div>
-    </form>
+  <main class="inner">
+    <section class="mainBox">
+      <h2 class="login">ログイン</h2>
+      <form action="" method="post">
+        <div class="username">
+          <span class="err_msg"><?php if(!empty($err_msg['login'])) echo $err_msg['login']; ?></span>
+          <label>ユーザー名
+            <input class="box" type="user_name" name="user_name" value="<?php echo htmlspecialchars($_POST['user_name'], ENT_QUOTES); ?>">
+          </label>
+        </div>
+        <div class="loginpass">
+          <label>パスワード
+            <input class="box" type="password" name="password" value="<?php echo htmlspecialchars($_POST['password'], ENT_QUOTES); ?>">
+          </label>
+        </div>
+        <div class="form-group">
+          <input type="checkbox" class="form-control" id="save" name="save" value="on">
+          <label for="save" id="rememberLabel" class="rememberMe">次回から自動的にログインする</label>
+        </div>
+        <input type="submit" class="btn" value=ログイン href="https://believerfuture.000webhostapp.com"></input>
+        <div class="form-group">
+          <a href="signup.php" class="newUser">新規登録はこちら</a>
+        </div>
+      </form>
+    </section>
   </main>
 </body>
 </html>
