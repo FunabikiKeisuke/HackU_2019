@@ -1,3 +1,18 @@
+<?php
+// ログイン判定
+if (isset($_SESSION['id']) && $_SESSION['time'] + 3600 > time()) {
+	// ログインしている
+	$_SESSION['time'] = time();
+
+	$members = $db->prepare('SELECT * FROM members WHERE id=?');
+	$members->execute(array($_SESSION['id']));
+	$member = $members->fetch();
+} else {
+	// ログインしていない
+	header('Location: https://believerfuture.000webhostapp.com/welcomepage.php'); exit();
+}
+?>
+
 <!DOCTYPE HTML>
 <html lang="ja">
 <!-- Open Graph Protcol(topページ以外はwebsiteをarticleへ変更) -->
