@@ -69,3 +69,14 @@ article,section {
 
 a img{-webkit-transition: all .3s ease-out; -moz-transition: all .3s ease-out; -ms-transition: all .3s ease-out;}
 a:hover img, a:hover p, a:hover h2 {filter: alpha(opacity=60);opacity:0.6;background: none;}
+
+body {
+  background: rgba(236, 241, 196, 0.67);
+}
+.inner {
+  width: 1000px;
+  height: 91vh;
+  margin: 0 auto;
+  padding: 20px;
+  background: #f7f7f7;
+}
