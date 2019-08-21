@@ -6,7 +6,9 @@
   <title>アプリ名 | サブタイトル</title>
   <meta charset="utf-8">
   <!-- 読み込み速度向上用 preload -->
+  <link rel="preload" href="css/common.css" as="style">
   <link rel="preload" href="css/changePassword.css" as="style">
+  <link rel="preload" href="css/common-sp.css" as="style">
   <link rel="preload" href="css/changePassword-sp.css" as="style">
   <!-- SEO対策用 後で設定 -->
   <meta name="description" content="">
@@ -14,7 +16,9 @@
   <meta name="keywords" content="">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" href="css/common.css" media="only screen and (min-width:1001px)">
   <link rel="stylesheet" href="css/changePassword.css" media="only screen and (min-width:1001px)">
+  <link rel="stylesheet" href="css/common-sp.css" media="only screen and (max-width:1000px)">
   <link rel="stylesheet" href="css/changePassword-sp.css" media="only screen and (max-width:1000px)">
   <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,500,700,900&display=swap&subset=japanese" rel="stylesheet">
   <!-- og: sns拡散用クリックしたくなるcontentを設定 -->

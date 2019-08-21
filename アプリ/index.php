@@ -98,7 +98,7 @@ if (isset($_SESSION['id']) && $_SESSION['time'] + 3600 > time()) {
   <!-- maincontents -->
   <article class="inner">
     <div class="contentbox">
-      <a href="">
+      <a href="question.php">
         <div class="img-wrap">
           <img src="img/index/1.png" alt="クエスチョンマークのアイコン">
         </div>
@@ -106,7 +106,7 @@ if (isset($_SESSION['id']) && $_SESSION['time'] + 3600 > time()) {
       </a>
     </div>
     <div class="contentbox">
-      <a href="">
+      <a href="graph.php">
         <div class="img-wrap">
           <img src="img/index/2.png" alt="グラフのアイコン">
         </div>
@@ -114,7 +114,7 @@ if (isset($_SESSION['id']) && $_SESSION['time'] + 3600 > time()) {
       </a>
     </div>
     <div class="contentbox">
-      <a href="">
+      <a href="jissekiList.php">
         <div class="img-wrap">
           <img src="img/index/3.png" alt="リストのアイコン">
         </div>
