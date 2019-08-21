@@ -75,9 +75,9 @@
   </header>
   <!-- maincontents -->
   <main>
-      <h1>Q1/5</h1>
+      <h1>Q 1/5</h1>
 <div class="today-question">
-<h1>ここに問題を表示</h1>
+<h1>日頃から、周りの人に対して親切にするよう心がけている</h1>
 <div class="answer">
 <ul>
 <li><label><input class="a" type="radio" name="radio" value="そう思う"><p>そう思う</p></label></li>
