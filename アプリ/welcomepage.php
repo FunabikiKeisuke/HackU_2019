@@ -8,7 +8,7 @@
   <link rel="preload" href="css/common.css" as="style">
   <link rel="preload" href="css/welcomepage.css" as="style">
   <link rel="preload" href="css/common-sp.css" as="style">
-  <link rel="preload" href="css/index-sp.css" as="style">
+  <link rel="preload" href="css/welcomepage-sp.css" as="style">
   <!-- SEO対策用 後で設定 -->
   <meta name="description" content="">
   <!-- SEO対策用 後で設定 -->
@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="css/common.css" media="only screen and (min-width:1001px)">
   <link rel="stylesheet" href="css/welcomepage.css" media="only screen and (min-width:1001px)">
   <link rel="stylesheet" href="css/common-sp.css" media="only screen and (max-width:1000px)">
-  <link rel="stylesheet" href="css/index-sp.css" media="only screen and (max-width:1000px)">
+  <link rel="stylesheet" href="css/welcomepage-sp.css" media="only screen and (max-width:1000px)">
   <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:300,400,500,700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Audiowide&display=swap&subset=latin-ext" rel="stylesheet">
   <!-- og: sns拡散用クリックしたくなるcontentを設定 -->

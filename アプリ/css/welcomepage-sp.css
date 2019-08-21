@@ -14,13 +14,15 @@ body {
 }
 
 .inner{
+  height: 120vh;
+  overflow: hidden;
   text-align: center;
-  width: 1000px;
+  width: 100%;
   margin: 0 auto;
   padding: 50px 20px 300px 20px;
   background: #f7f7f7;
   font-size:16px;
-  background: url(../img/notebook.jpg) no-repeat center;
+  background: url(../img/notebook.jpg) no-repeat top -100px left;
   background-size: cover;
 }
 .inner p {
@@ -37,9 +39,4 @@ body {
   font-size:22px;
 }
  
-.sinin{
-  display:inline-block;
-}
-.sinup{
-  display: inline-block;
-}
+
