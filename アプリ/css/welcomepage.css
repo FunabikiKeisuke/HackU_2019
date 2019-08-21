@@ -91,5 +91,5 @@ header ul li a p {
   font-size:22px;
 }
 .abc{
-  margin: auto;
+  float: left;
 }
