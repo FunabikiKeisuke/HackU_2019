@@ -1,3 +1,4 @@
+<!--
 <?php
 require('dbconnect.php');
 
@@ -19,7 +20,7 @@ if (isset($_SESSION['id']) && $_SESSION['time'] + 3600 > time()) {
 	header('Location: https://believerfuture.000webhostapp.com/welcomepage.php'); exit();
 }
 ?>
-
+-->
 <!DOCTYPE HTML>
 <html lang="ja">
 <!-- Open Graph Protcol(topページ以外はwebsiteをarticleへ変更) -->

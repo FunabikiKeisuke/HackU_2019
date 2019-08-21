@@ -14,30 +14,30 @@ h2{
     display: inline-block;
     padding-bottom: 0.4em;
     border-bottom-style: double;
-    border-bottom-width: 4px;
-    margin-bottom: 20px;
+    border-bottom-width: 0.888888888889vw;
+    margin-bottom: 4.44444444444vw;
 }
 
 input{
   background: #f7f7f7;
     border: none;
     text-decoration: none;
-    padding-top: 10px;
-    padding-top: 10px;
-    font-size: 18px;
-    margin: 10px;
+    padding-top: 2.22222222222vw;
+    padding-top: 2.22222222222vw;
+    font-size: 4.0vw;
+    margin: 2.22222222222vw;
 }
 
 .btn{
   background-color: #555;
     color: #f7f7f7;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 10px;
-    margin: 10px;
-    margin-bottom: 25px;
-    padding-top: 10px;
-    margin-top: 25px;
+    padding-left: 4.44444444444vw;
+    padding-right: 4.44444444444vw;
+    padding-bottom: 2.22222222222vw;
+    margin: 2.22222222222vw;
+    margin-bottom: 5.55555555556vw;
+    padding-top: 2.22222222222vw;
+    margin-top: 5.55555555556vw;
 }
 .newUser{
   text-decoration: none;
@@ -52,29 +52,29 @@ input{
 
 label{
   display: inline-block;
-    width: 140px;
-    margin-bottom: 10px;
+    width: 31.1111111111vw;
+    margin-bottom: 2.22222222222vw;
 }
 
 .rememberMe{
   display: inline-block;
-  margin: 10px;
+  margin: 2.22222222222vw;
 }
 
 .box{
-  border-bottom: 2px solid #adadad;
-    padding-top: 10px
+  border-bottom: 0.444444444444vw solid #adadad;
+    padding-top: 2.22222222222vw
 }
 
 
 .gender{
-    margin-left: -50px;
+    margin-left: -11.1111111111vw;
 }
 
 .gender1{
-    margin-left: 50px;
+    margin-left: 11.1111111111vw;
 }
 
 .entry{
-    margin-bottom: 20px;
+    margin-bottom: 4.44444444444vw;
 }
