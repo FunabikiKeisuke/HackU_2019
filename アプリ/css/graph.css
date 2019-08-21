@@ -1,0 +1,45 @@
+h1{
+  text-align: center;
+}
+.graph{
+  text-align: center;
+  margin-top: 20px;
+  margin-left: 200px;
+  margin-right: 200px;
+  margin-bottom: 40px;
+  background-color:white;
+  border-width:5px;
+  border-color:white;
+  border-style:solid;
+}
+.in{
+  display:inline-block;
+margin-right:50px;
+}
+span{
+  display:inline-block;
+  background-color:green;
+  width:30px;
+}
+.question1{
+height:100px;
+}
+.question2{
+height:20px;
+}
+.question3{
+height:50px;
+}
+.question4{
+  height:100px;
+}
+.question5{
+height:200px;
+}
+.sub{
+  text-align: center;
+}
+input{
+  text-align: center;
+  padding:20px 40px;
+}
